@@ -100,9 +100,12 @@ p {
     flex-flow: column nowrap;
     gap: 5px;
     align-items: flex-start;
+    text-align: start;
 }
 
 .document-list > li.preview iframe {
+    display: block;
+    width: 100%;
     border: 0px;
     overflow: hidden;
     pointer-events: none;
@@ -117,8 +120,21 @@ p {
         flex-flow: column nowrap;
     }
 
+    header nav {
+        line-height: 1.5;
+    }
+
     main {
         min-height: unset;
-        padding: 10px 5px;
+        padding: 10px;
+    }
+
+    .document-list > li.preview {
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    .document-list > li.preview > .info {
+        flex-flow: row wrap;
     }
 }
