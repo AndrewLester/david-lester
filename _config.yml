@@ -1,0 +1,69 @@
+title: David Lester's Files
+description: >-
+  An organized repository of some of David Lester's essays and studies.
+baseurl: ''
+url: 'https://andrewlester.github.io/david-lester/'
+github_username: jekyll
+
+# Build settings
+include:
+  - _pages
+
+defaults:
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
+  - scope:
+      path: "assets/files"
+    values:
+      file: true
+  - scope:
+      path: "assets/files/about"
+    values:
+      about: true
+  - scope:
+      path: "assets/files/biographical-studies"
+    values:
+      biographical-studies: true
+  - scope:
+      path: "assets/files/crisis-intervention"
+    values:
+      crisis-intervention: true
+  - scope:
+      path: "assets/files/essays-suicidology"
+    values:
+      essays-suicidology: true
+  - scope:
+      path: "assets/files/john-connolly-interviews"
+    values:
+      john-connolly-interviews: true
+  - scope:
+      path: "assets/files/suicide-studies"
+    values:
+      suicide-studies: true
+  - scope:
+      path: "_pages/document-types"
+    values:
+      stylesheets:
+        - document-type
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

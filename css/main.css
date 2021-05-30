@@ -1,0 +1,124 @@
+:root {
+    --header-height: 125px;
+    --footer-height: 24px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: normal;
+}
+
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    height: var(--header-height);
+    gap: 10px;
+    padding: 5px 15px;
+}
+
+header img {
+    display: block;
+    height: 100px;
+    clip-path: circle(50% at 50% 50%);
+}
+
+header > .column {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+header nav > a {
+    color: black;
+    text-decoration: none;
+    opacity: 0.5;
+    font-weight: bold;
+    transition: opacity 200ms ease;
+    font-size: 18px;
+    margin-right: 5px;
+    white-space: nowrap;
+}
+
+header nav > a:hover, header nav > a.active {
+    opacity: 1;
+}
+
+main {
+    padding: 10px 25px;
+    min-height: calc(100vh - calc(var(--header-height) + var(--footer-height)));
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--footer-height);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+main a {
+    color: black;
+    opacity: 0.8;
+    text-decoration-color: rgba(0, 0, 0, 0.8);
+    transition: opacity 200ms ease, text-decoration-color 200ms ease;
+}
+
+main a:hover {
+    opacity: 1;
+    text-decoration-color: black;
+}
+
+p {
+    font-size: 18px;
+}
+
+.document-list {
+    list-style: none;
+    padding-left: 0px;
+    font-size: 18px;
+}
+
+.document-list > li:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.document-list > li.preview {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.document-list > li.preview > .info {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 5px;
+    align-items: flex-start;
+}
+
+.document-list > li.preview iframe {
+    border: 0px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+@media (max-width: 650px) {
+    :root {
+        --header-height: auto;
+    }
+
+    header {
+        flex-flow: column nowrap;
+    }
+
+    main {
+        min-height: unset;
+        padding: 10px 5px;
+    }
+}

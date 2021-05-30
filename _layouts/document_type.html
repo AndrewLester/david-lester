@@ -3,7 +3,13 @@
 {% include head.html %}
 
 <body>
-    {% include header.html %} {{ content }} {% include footer.html %}
+    {% include header.html %}
+    <main>
+        <h1>{{ page.document_type_name }}</h1>
+        {{ content }}
+        {% include document_list.html name="Documents" document_type=page.document_type preview=true %}
+    </main>
+    {% include footer.html %}
     <script src="{{ site.baseurl }}/scripts/main.js"></script>
     {% if page.scripts %}
         {% for script in page.scripts %}
