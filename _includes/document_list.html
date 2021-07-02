@@ -5,10 +5,10 @@
         {% for document in documents %}
             <li {% if include.preview %}class="preview"{% endif %}>
                 {% if include.preview %}
-                    <a href="/{{ document.path}}"><iframe title="{{ document.basename }}" src="/{{ document.path }}"></iframe></a>
+                    <a href="{{ document.path}}"><iframe title="{{ document.basename }}" src="{{ document.path }}"></iframe></a>
                 {% endif %}
                 <div class="info">
-                    <a href="/{{ document.path }}">{{ document.basename }}</a> ({{ document.extname | upcase }})
+                    <a href="{{ document.path }}">{{ document.basename }}</a> ({{ document.extname | upcase }})
                 </div>
             </li>
         {% endfor %}
