@@ -1,8 +1,8 @@
 title: David Lester's Files
 description: >-
   An organized repository of some of David Lester's essays and studies.
-baseurl: '/david-lester'
-url: 'https://andrewlester.github.io/david-lester/'
+baseurl: "/david-lester"
+url: "https://andrewlester.github.io/david-lester"
 github_username: jekyll
 
 # Build settings
