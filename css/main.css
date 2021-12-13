@@ -72,6 +72,19 @@ main a:hover {
     text-decoration-color: black;
 }
 
+main li.preview a {
+    filter: brightness(1);
+    transition: filter 200ms ease;
+}
+
+main li.preview a:hover {
+    filter: brightness(0.9);
+}
+
+main li.preview a:active {
+    filter: brightness(0.8);
+}
+
 p {
     font-size: 18px;
 }
