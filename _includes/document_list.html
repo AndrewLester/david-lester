@@ -1,16 +1,23 @@
 <div class="document-list-wrapper">
     <h2>{{ include.name }}</h2>
     <ul class="document-list">
-        {% assign documents = site.static_files | where: include.document_type, true %}
-        {% for document in documents %}
-            <li {% if include.preview %}class="preview"{% endif %}>
-                {% if include.preview %}
-                    <a href="{{ document.path}}"><iframe title="{{ document.basename }}" src="{{ document.path }}" loading="lazy"></iframe></a>
-                {% endif %}
-                <div class="info">
-                    <a href="{{ document.path }}">{{ document.basename }}</a> ({{ document.extname | upcase }})
-                </div>
-            </li>
+        {% assign documents = site.static_files | where: include.document_type,
+        true %} {% for document in documents reversed %}
+        <li {% if include.preview %}class="preview" {% endif %}>
+            {% if include.preview %}
+            <a href="{{ document.path}}"
+                ><iframe
+                    title="{{ document.basename }}"
+                    src="{{ document.path }}"
+                    loading="lazy"
+                ></iframe
+            ></a>
+            {% endif %}
+            <div class="info">
+                <a href="{{ document.path }}">{{ document.basename }}</a> ({{
+                document.extname | upcase }})
+            </div>
+        </li>
         {% endfor %}
     </ul>
 </div>
