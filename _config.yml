@@ -31,6 +31,10 @@ defaults:
     values:
       crisis-intervention: true
   - scope:
+      path: "assets/files/encyclopedia-of-personality"
+    values:
+      encyclopedia-of-personality: true
+  - scope:
       path: "assets/files/essays-suicidology"
     values:
       essays-suicidology: true
