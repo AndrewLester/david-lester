@@ -43,6 +43,10 @@ defaults:
     values:
       john-connolly-interviews: true
   - scope:
+      path: "assets/files/studies-on-the-multiple-self"
+    values:
+      studies-on-the-multiple-self: true
+  - scope:
       path: "assets/files/suicide-studies"
     values:
       suicide-studies: true
